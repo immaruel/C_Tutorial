@@ -1,36 +1,32 @@
-#include<stdio.h>
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
 int int_max(int i, int j);
-
 int int_max(int i, int j)
 {
-	int m; //stack frame
-	m = i > j ? i : j;
-	return m;
+    int m; // stack frame
+    m = i > j ? i : j;
+    return m;
 }
-
 int main()
 {
-	int a; // Áö¿ª º¯¼ö  
-	
-	a = int_max(1,2);
-	
-	printf("%d\n", a);
-	printf("%p\n", &a);  // aÀÇ ÁÖ¼Ò°ª  
-	
-	{
-		int a; 
-		a = int_max(4,5);
-		
-		printf("%d\n", a);
-		printf("%p\n", &a); 
-		
-		int b = 123;
-	}
-	
-	printf("%d\n",a);
-	printf("%p\n", &a);
-	
-	return 0; 
+    int a; // ì§€ì—­ë³€ìˆ˜
+    int b = 9;
+    a = int_max(1, 2);
+
+    printf("%d\n", a);
+    printf("%p\n", &a);
+    {
+        a = int_max(4, 5);
+
+        printf("%d\n", a);
+        printf("%p\n", &a);
+
+        int b = 123;
+    }
+    printf("%d\n", a);
+    printf("%p\n", &a);
+
+    printf("%d\n", b);
+    printf("%p\n", &b);
 }

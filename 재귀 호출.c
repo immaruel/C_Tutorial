@@ -1,23 +1,17 @@
-#include<stdio.h>
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
-void my_func(int);
-
+void my_func(int n);
 int main()
 {
-	 my_func(1); 
+    my_func(1);
 
-	 return 0;
-} 
+    return 0;
+}
 void my_func(int n)
 {
-	printf("level %d, address of variable n = %p\n",n, (int)& n);
-	
-	if ( n <= 4)
-		my_func(n + 1); // Ãâ·Â°ªÀÌ 5°¡ µÉ‹š ±îÁö °è¼Ó ¹Ýº¹ÇÑ ÈÄ ´Ù½Ã ¿ø·¡°ªÀ¸·Î Àç±ÍµÊ  
-		
-		
-	printf("level %d, address of variable n = %p\n",n, (int)& n); // µ¹¾Æ¿À´Â °æ·Î Ãâ·Â (Àç±ÍÈ£Ãâ ) 
-		
-		
-}
+    printf("Level %d, address of variable n = %p\n", n, &n);
+
+    if(n <=4)
+     my_func(n + 1); // ìžê¸° ìžì‹  í˜¸ì¶œ
+}   
