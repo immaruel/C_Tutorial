@@ -28,7 +28,7 @@ int main()
     {
         printf("%d %d\n", *ptr, arr[i]);
         ptr++;
-        prinf(" %d %d\n", *(ptr + i), arr[i]);
+        printf(" %d %d\n", *(ptr + i), arr[i]);
 
     }
 
