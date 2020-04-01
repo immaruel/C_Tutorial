@@ -23,8 +23,8 @@ int main()
     puts("END.");
 
     /* fget  fputs 함수*/
-    char words[STRLEN] = "";
-    fgets(words, STRLEN, stdin); // 자동줄바꿈 안해줌
+    char words[strlen] = "";
+    fgets(words, strlen, stdin); // 자동줄바꿈 안해줌
 
     int i = 0;
     while (words[i] != '\n' && words[i] != '\0')
@@ -68,7 +68,4 @@ int main()
     printf("%s|%s\n", str1, str2);
 
 }
-char* custom_string_input(char* st, int n)
-{
 
-}
